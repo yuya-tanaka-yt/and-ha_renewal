@@ -1,0 +1,29 @@
+@media screen and (max-width: 720px){
+  
+.open,
+.close{
+  display: block;
+}
+
+.open{
+  position: absolute;
+}
+
+
+.header-nav{
+    display: none;
+}
+
+aside{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  height: 100%;
+  transition: all 0.2s;
+}
+  
+input[]
+
+
+
+}

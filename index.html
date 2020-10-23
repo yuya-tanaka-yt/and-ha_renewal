@@ -16,37 +16,45 @@
 </head>
 
 <body>
-  <!--header-->
+  <!--@media screen aside-->
+  <div>
+    <h1><a href="index.html"><img class="header-logo-img-aside" src="img/logo_andha.png" alt=And-HA></a></h1>
+  </div>
 
   <input id="menu" type="checkbox" />
-  <label for="menu" class="open">〇</label>
+  <label for="menu" class="open">menu</label>
   <label for="menu" class="back"></label>
 
-  <aside>
-    <label for="menu" class="close">✖</label>
-    <nav>
-      <ul class="header-nav-ul">
-       <li><a href="#">ホーム</a></li>
-       <li><a href="#">特徴</a></li>
-       <li><a href="#">サービス</a></li>
-       <li><a href="#">得意分野</a></li>
-       <li><a href="#">実績</a></li>
-       <li><a href="#">ブログ</a></li>
-       <li><a href="#">採用情報</a></li>
-       <li><a href="#">会社概要</a></li>
-      </ul>
-     </nav>
-     <div class="header-contact">
-      <a class="header-contact-btn" href="#">お問い合わせ</a>
+
+  <aside> 
+    <label for="menu" class="close">close</label>
+    <div class="aside-wrapper">
+      <nav class="aside-nav">
+        <ul class="aside-ul">
+         <li><a class="aside-li" href="#">ホーム</a></li>
+         <li><a class="aside-li" href="#">特徴</a></li>
+         <li><a class="aside-li" href="#">サービス</a></li>
+         <li><a class="aside-li" href="#">得意分野</a></li>
+         <li><a class="aside-li" href="#">実績</a></li>
+         <li><a class="aside-li" href="#">ブログ</a></li>
+         <li><a class="aside-li" href="#">採用情報</a></li>
+         <li><a class="aside-li" href="#">会社概要</a></li>
+        </ul>
+      </nav>
+      <div class="aside-contact">
+        <a class="aside-contact-btn" href="#">お問い合わせ・お見積り</a>
+      </div>
     </div>
   </aside>
 
+
+  <!--header-->
   <header class="site-header">
     <div class="page-header">
       <div class="page-header-left">
   
         <div class="header-logo">
-          <h1><a href="index.html"><img class="header-logo-img" src="img/logo_andha.png" alt=!And-HA></a></h1>
+          <h1><a href="index.html"><img class="header-logo-img" src="img/logo_andha.png" alt=And-HA></a></h1>
         </div>
   
         <div class="header-nav">
@@ -73,42 +81,42 @@
       </div>
     </div>
   </header>
+
+  <div class="mv-back-color">
+  </div>
+
+  <div class="ill-logo">
+    <img src="img/ill_logo.png" alt="ill-logo">
+  </div>
+
+  <div class="scloll">
+    <img src="img/scroll.png" alt="scroll">
+  </div>
   
   <!------------------main------------------>
   <main>
     <!------------------mv------------------>
     <section class="main-visual">
-      <div class="mv-back-color">
-      </div>
-
-      <div class="ill-logo">
-        <img src="img/ill_logo.png" alt="ill-logo">
-      </div>
-
- <!-- <div class="scloll">
-        <img src="img/scroll.png" alt="scroll">
-      </div> -->
-
       <div class="mv-body">
         <div class="title">
           <div class="mv-title">
             <h2>WEBサイトの運用/改善が<br>得意なWEB制作会社</h2>
           </div>
           <p class="mv-text">ホームページやECサイトは見た目を綺麗に作るだけでは効果は出ません。
-            <br>理論に沿ったデザインと日々の運用・改善が必要です。
-            <br>弊社では大手から中小企業まで幅広い案件で培った180項目以上の
-            <br>改善メソッドに沿ったデザインとGoogleAnalyticsを活用した運用改善、
-            <br>広告運用、SNS活用まで対応出来る幅広いマーケティングスキルを
-            <br>組み合わせて本当に価値のあるWEB活用をご提案いたします。
+            <br class="pc-text">理論に沿ったデザインと日々の運用・改善が必要です。
+            <br class="pc-text">弊社では大手から中小企業まで幅広い案件で培った180項目以上の
+            <br class="pc-text">改善メソッドに沿ったデザインとGoogleAnalyticsを活用した運用改善、
+            <br class="pc-text">広告運用、SNS活用まで対応出来る幅広いマーケティングスキルを
+            <br class="pc-text">組み合わせて本当に価値のあるWEB活用をご提案いたします。
           </p>
-      
+        </div>
+        <div class="contact-btn-block">
           <div class="contact-btn-wrapper">
             <a href="#" class="contact-btn">
               お問い合わせ・お見積り
             </a>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -116,24 +124,30 @@
     <section class="about-section">
       <div class="question">
         <div>
-          <h4 class="question-title">こんな<span class="text-color">課題</span>ありませんか？</h4>
+          <h4 class="question-title">
+            こんな<span class="text-color">課題</span><br class="media-text">ありませんか？
+          </h4>
         </div>
         <div class="question-wrapper">
-          <div class="question-lead">
-            <p class="question-text">サイトが古くリニューアルしたいが、<br>どうすれば良いかわからない…</p>
-            <img class="question-img" src="img/グループ 2034.png" alt="human1">
+          <div class="question-wrap1">
+            <div class="question-lead question-item1" >
+              <p class="question-text">サイトが古くリニューアルしたいが、<br>どうすれば良いかわからない…</p>
+              <img class="question-img1" src="img/グループ 2034.png" alt="human1">
+            </div>
+            <div class="question-lead question-item3">
+              <img class="question-img2" src="img/グループ 2036.png" alt="human3">
+              <p class="question-text">どのようなサイトを作れば、<br>効果が出るのか分からない…</p>
+            </div>
           </div>
-          <div class="question-lead">
-            <p class="question-text">新しくECサイトを立ち上げたいが<br>どのように制作すればいいか分からない…</p>
-            <img class="question-img" src="img/グループ 2035.png" alt="human2">
-          </div>
-          <div class="question-lead">
-            <img class="question-img" src="img/グループ 2036.png" alt="human3">
-            <p class="question-text">どのようなサイトを作れば、<br>効果が出るのか分からない…</p>
-          </div>
-          <div class="question-lead">
-            <img class="question-img" src="img/グループ 2037.png" alt="human4">
-            <p class="question-text">サイトを制作した・リニューアル<br>したが、問い合わせが増えない…</p>
+          <div class="question-wrap2">
+            <div class="question-lead question-item2">
+              <p class="question-text">新しくECサイトを立ち上げたいが<br>どのように制作すればいいか<br class="media-text">分からない…</p>
+              <img class="question-img3" src="img/グループ 2035.png" alt="human2">
+            </div>
+            <div class="question-lead question-item4">
+              <img class="question-img4" src="img/グループ 2037.png" alt="human4">
+              <p class="question-text">サイトを制作した・<br class="media-text">リニューアル<br class="pc-text">したが、<br class="media-text">問い合わせが増えない…</p>
+            </div>
           </div>
         </div>
       </div>
@@ -144,13 +158,13 @@
           </div>
         </div>
         <div class="answer-wrapper">
-          <h4 class="answer-title">WEBマーケティングをワンストップでご提案</h4>
+          <h4 class="answer-title">WEBマーケティングを<br class="media-text">ワンストップでご提案</h4>
           <div class="answer-img-div">
-            <img class="answer-img" src="img/ill_onestop.png" alt="WEBマーケティングの過程">
+            <img class="answer-img" src="img/ill_onestop.png" alt="WEBマーケティングの過程" width="700px" height="287px">
           </div>
           <div class="answer-text">
             <p>WEBサイトは綺麗に作るだけでは効果が出ません。<br>
-              WEBサイト独自のデザインセオリー、広告運用、SNS活用を理解していないと、<br>
+              WEBサイト独自のデザインセオリー、広告運用、SNS活用を理解していないと、<br class="pc-text">
               効果の出るWEBサイト・ECサイトを制作することは難しいでしょう。<br>
               私たちはWEB制作〜マーケティングまでワンストップでご提案することが出来ます。</p>
           </div>
@@ -170,13 +184,17 @@
 
       <div class="service-container">
         <div class="service-item">
-          <img class="service-img-ill1" src="img/ill.png" alt="戦略">
+          <div>
+            <img class="service-img-ill1" src="img/ill.png" alt="戦略">
+          </div>
           <figcaption class="service-lead">
             <div class="service-head">
               <p class="service-p">戦略</p>
               <p class="ing-trans">Strategic Planning</p>
             </div>
-            <div class="hover-text">市場調査、データ解析、ターゲット選定から、カスタマージャーニー、ROI、KPI、流入経路、データマネジメントといった各種設計など、Webサイトの成功への戦略要素を精緻化。
+            <div class="hover-text">
+              </p> 市場調査、データ解析、ターゲット選定から、カスタマージャーニー、ROI、KPI、流入経路、データマネジメントといった各種設計など、Webサイトの成功への戦略要素を精緻化。
+              <p>
             </div>
           </figcaption>
         </div>
@@ -524,7 +542,6 @@
             <p class="blog-title">ブログ記事タイトルダミー<br>ダミー</p>
             <p class="blog-date">2020.01.01</p>
           </div>
-        
         </div>
         <div class="btn-wrapper">
           <a class="section-btn" href="#">ブログ一覧を見る</a>
@@ -534,27 +551,25 @@
       
       <!--contact-->
       <div class="contact">
-        <p class="contact-heading">WEB制作のことなら何でもご相談下さい。</p>
-        <div class="contact-btn-wrapper">
-          <a class="contact-btn" href="#">お問い合わせ・お見積り
-          </a> 
-        </div>
-        <div class="contact-wrapper">
-          <div class="contact-info">
-
-            <div class="contact-text">
-              <p>お電話でのお問い合わせはこちら</p>
+        <div class="contact-wrap">
+          <p class="contact-heading">WEB制作のことなら<br class="media-text">何でもご相談下さい。</p>
+          <div class="contact-btn-wrapper">
+            <a class="contact-btn" href="#">お問い合わせ・お見積り
+            </a> 
+          </div>
+          <div class="contact-wrapper">
+            <div class="contact-info">
+              <div class="contact-text">
+               <p>お電話でのお問い合わせはこちら</p>
+              </div>
+              <div class="contact-cn">
+                <img src="img/パス 3191.png" alt="電話イラスト">
+                <span class="contact-call-number">022-302-5351</span> 
+              </div>
+              <div class="contact-time">
+                <span>平日 10:00～18:00</span>
+              </div>
             </div>
-            <div class="contact-ill">
-              <img src="img/パス 3191.png" alt="電話イラスト">
-            </div>
-            <div class="contact-cn">
-              <span>022-302-5351</span> 
-            </div>
-            <div class="contact-time">
-              <span>平日 10:00～18:00</span>
-            </div>
-
           </div>
         </div>
       </div>
@@ -636,7 +651,10 @@
               <p>仙台<br>オフィス</p>
             </div>
             <div class="sendai-detail-2">
-              <address>〒980-0014<br>宮城県仙台市青葉区本町1-12-12</address>
+              <address>
+                <p>〒980-0014<br>宮城県仙台市青葉区本町1-12-12</p>
+              </address>
+                  
             </div>
           </div>
 
@@ -645,7 +663,9 @@
               <p>東京<br>オフィス</p>
             </div>
             <div class="tokyo-detail-2">
-              <address>〒153-0044<br>東京都目黒区大橋2-2-27 村田ビル3F</address>
+              <address>
+                <p>〒153-0044<br>東京都目黒区大橋2-2-27 村田ビル3F</p>
+              </address>
             </div>
           </div>
         </div>
@@ -654,7 +674,7 @@
 
 
     <div class="footer-cat3">
-      <p><small>&copy; Copylight　And-HA　inc.　ALL right　reserved.</small></p>
+      <p><small>&copy; Copylight And-HA inc. ALL right reserved.</small></p>
     </div>
 
   </footer>

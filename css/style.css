@@ -1,13 +1,23 @@
 @charset "UTF-8";
 
 /* ------------------共通------------------ */
+
+body{
+ width: 100%;
+ box-sizing: content-box;
+}
+
+body{
+  font-family: "Noto Sans CJK JP",
+  "montserrat",
+  sans-serif;
+}
+
 a{
   text-decoration: none;
-  font-family: 'Noto Sans CJK JP';
 }
 
 p{
-  font-family: 'Noto Sans CJK JP';
   color: #666666;
 }
 
@@ -18,7 +28,6 @@ li{
 
 h1 h2 h4 h5 h6{
   color: #333333;
-  font-family: 'Noto Sans CJK JP';
   font-weight: 900;
 }
 
@@ -61,18 +70,14 @@ img{
   max-width: 100%;
 }
 
-.btn-wrapper{
-  display: flex;
-  justify-content: center;
-  margin-top: 86px;
-}
 
+/* --お問い合わせボタン--*/
 .contact-btn-wrapper{
   display: flex;
   justify-content: center;
 }
-
 .contact-btn{
+  margin: 0 auto;
   display: block;
   width: 356px;
   padding: 23px 0;
@@ -84,36 +89,34 @@ img{
   letter-spacing: 0.12em;
   position: relative;
 }
-
-.contact-btn::after{
-    content: "";
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    border-top: 2px solid ;
-    border-right: 2px solid ;
-    border-color: #FFFFFF;
-    transform: rotate(45deg);
-    right: 40px;
-    top: 47%;
-    transition: all 0.3s ease-out;
-}
-
 .contact-btn:hover{
   background-color: #E34A1D;
 }
-
-.contact-btn:hover::after{
+.contact-btn::after{
+  transition: 0.3s;
   content: "";
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
   position: absolute;
-  transform: rotate(45deg) translateX(10px) translateY(-10px);
+  transform: rotate(45deg);
+  top: -2px;
+  bottom: 0;
+  right: 40px;
+  margin: auto;
+}
+.contact-btn:hover::after{
+  right: 20px;
 }
 
-.section-btn-wrap{
-  text-align: center;
-  margin-top: 100px;
-}
 
+/* ---section_btn---*/
+.btn-wrapper{
+  display: flex;
+  justify-content: center;
+  margin-top: 86px;
+}
 .section-btn{
   font-weight: bold;
   color: #FFFFFF;
@@ -125,59 +128,41 @@ img{
   padding: 18px 0;
   text-align: center;
 }
-
 .section-btn:hover{
   color: #333;
   background-color: #EEE;
 }
-
 .section-btn::after{
+  transition: 0.3s;
   content: "";
-  position: absolute;
   width: 6px;
   height: 6px;
   border-top: 2px solid #fff;
   border-right: 2px solid #fff;
-  transform: rotate(45deg);
-  right: 40px;
-  top: 47%;
-  transition: all 0.3s ease-out;
-}
-
-.section-btn:hover::after{
-  content: "";
   position: absolute;
+  transform: rotate(45deg);
+  top: -2px;
+  bottom: 0;
+  right: 40px;
+  margin: auto;
+}
+.section-btn:hover::after{
+  right: 20px;
   border-top: 2px solid #333;
   border-right: 2px solid #333;
-  transform: rotate(45deg) translateX(10px) translateY(-10px);
 }
+
 
 /* ------------------header------------------ */
-
-/* --aside--*/
-
-.open,
-.close,
-aside{
-  display: none;
-}
-
-input[type="checkbox"]{
-  position: absolute;
-  left: -50vw;
-}
-
-/* --header--*/
-
 .site-header{
   width: 100%;
   position: absolute;
+  z-index: 2;
   margin-top: 32px;
   background: rgba(255,255,255,0);
 }
 
 .fixed{
-  z-index: 2;
   position: fixed;
   transition: 0.5s;
   background: rgba(255,255,255,0.5);
@@ -272,18 +257,10 @@ input[type="checkbox"]{
 
 
 /* ------------------------------------main------------------------------------ */
-
-/* ------------------mv------------------ */
-.main-visual{
-  position: relative;
+main{
   width: 100%;
-  height: 816px;
-  margin-bottom: 98px;
-}
-
-.mv-body{
-  width: 992px;
-  margin: 0 auto;
+  padding: 0;
+  margin: 0;
 }
 
 .mv-back-color{
@@ -293,17 +270,29 @@ input[type="checkbox"]{
   position: absolute;
   background-color: #f6f6f6;
   width: 70%;
-  height: 760px;
+  height: 100vh;
 }
-
 
 .ill-logo{
   z-index: -50;
   position: absolute;
-  top: 29%;
+  top: 30%;
   left: 51%;
-  width: 770px;
-  height: 600px;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.scloll{
+  position: absolute;
+  bottom: -100px;
+}
+
+/* ------------------mv------------------ */
+.main-visual{
+  max-width: 992px;
+  height: auto;
+  margin: 0 auto;
 }
 
 .mv-title{
@@ -311,7 +300,7 @@ input[type="checkbox"]{
 }
 
 h2{
-  font-size: 32px;
+  font-size: 2rem;
   letter-spacing: 0.06em;
   line-height: 1.8;
 }
@@ -326,25 +315,30 @@ h2{
   margin-top: 70px;
 }
 
-
 /* ------------------about------------------ */
 .about-section{
+  margin-top: 260px;
   width: 100%;
 }
 
-.question-title{
-  font-weight: bold;
-  font-size: 40px;
+h4{
+  font-size: 2.5rem;
+  font-weight: 700;
   text-align: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  letter-spacing: 4px;
-  font-size: 40px;
 }
-
 h4 span{
   color: #F99900;
 }
+.media-text{
+  display: none;
+}
+
+.question-title{
+  margin-top: 40px;
+  margin-bottom: 40px;
+  letter-spacing: 4px;
+}
+
 
 .question{
   max-width: 992px;
@@ -362,9 +356,12 @@ h4 span{
   width: 100%;
 }
 
-.question-img{
-  height: 150px;
+.question-img1,
+.question-img2,
+.question-img3,
+.question-img4{
   width: 150px;
+  height: auto;
 }
 
 .question-text{
@@ -376,9 +373,10 @@ h4 span{
 }
 
 .answer{
+  width: 100%;
+  height: auto;
   background-color: #f6f6f6;
   margin-top: 60px;
-  height: 640px;
   position: relative;
 }
 
@@ -397,8 +395,6 @@ h4 span{
 }
 
 .answer-title{
-  font-weight: bold;
-  font-size: 40px;
   letter-spacing: -0.01em;
 }
 
@@ -408,12 +404,13 @@ h4 span{
 
 .answer-img{
   text-align: center;
-  height: 287px;
   width: 700px;
+  height: 287px;
 }
 
 .answer-text{
   margin-top: 5px;
+  padding-bottom: 60px;
 }
 
 .answer-text p{
@@ -426,6 +423,7 @@ h4 span{
 .service{
   max-width: 992px;
   margin: 0 auto;
+  height: auto;
 }
 
 .service-heading{
@@ -481,7 +479,6 @@ h4 span{
   color: #fff;
   font-size: 14px;
   letter-spacing: 0.15em;
-  font-family: 'Noto Sans CJK JP';
 }
 
 .service-item:hover .hover-text{
@@ -495,8 +492,8 @@ h4 span{
 }
 
 .service-img-ill1{
-  width: 220px;
-  height: 280px;
+  width: 216px;
+  height: auto;
   position: absolute;
   top: 48%;
   left: 50%;
@@ -505,7 +502,7 @@ h4 span{
 
 .service-img-ill2{
   width: 330px;
-  height: 310px;
+  height: auto;
   position: absolute;
   top: 48%;
   left: 49%;
@@ -569,7 +566,7 @@ h4 span{
 
 .works-item-img{
   width: 100%;
-  height: 303px;
+  height: auto;
   vertical-align: bottom;
 }
 
@@ -660,7 +657,7 @@ h4 span{
 }
 
 
-/* ------------------main-specialty----------------- */
+/* ----------------specialty---------------- */
 .specialty{
   max-width: 992px;
   margin: 0 auto;
@@ -771,7 +768,7 @@ h4 span{
 }
 
 
-/* ------------------main-news----------------- */
+/* ------------------news----------------- */
 .news{
   max-width: 992px;
   margin: 0 auto;
@@ -836,7 +833,7 @@ h4 span{
 }
 
 
-/* ------------------main-blog----------------- */
+/* ------------------blog----------------- */
 .blog{
   max-width: 992px;
   margin: 0 auto;
@@ -848,12 +845,11 @@ h4 span{
 }
 
 .blog-container{
-  margin-top: 75px;
+  margin: 75px auto 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(170px,1fr));
   gap: 38px;
-  grid-template-rows: 1fr 1fr;
-
+  grid-auto-rows: 1fr;
 }
 
 .blog-item{
@@ -862,7 +858,7 @@ h4 span{
 
 .blog-img{
   width: 100%;
-  height: 220px;
+  height: auto;
   padding: 0;
   margin: 0;
 }
@@ -889,7 +885,7 @@ h4 span{
 /* ------------------main-contact-banner----------------- */
 .contact{
   width: 100%;
-  height: 370px;
+  height: auto;
   margin-top: 158px;
   background-color: #3357A7;
   text-align: center;
@@ -908,13 +904,14 @@ h4 span{
 }
 
 .contact-wrapper{
-  margin-top: 36px;
+  margin: 0 auto;
+  padding-top: 36px;
+  padding-bottom: 60px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .contact-info{
-  width: 780px;
-  height: 80px;
-  margin: 0 auto;
   border: 1px solid #ffffff;
   padding: 20px 0px;
   display: flex;
@@ -941,13 +938,14 @@ h4 span{
   margin-bottom: 4px;
 }
 
-.contact-cn span{
+.contact-call-number{
   color: #FFFFFF;
   font-weight: bold;
   font-family: 'Noto Sans CJK JP';
   font-size: 34px;
   letter-spacing: 0.1em;
 }
+
 
 .contact-time{
   margin-right: 34px;
@@ -1032,7 +1030,6 @@ footer{
 .footer-cat2-text img{
   width: 160px;
   height: 40px;
-
 }
 
 .footer-cat2-add{
@@ -1064,6 +1061,10 @@ footer{
 
 .footer-cat2-add address{
   padding-left: 12px;
+}
+
+address{
+  font-style: normal;
 }
 
 /* ------------cat3------------ */

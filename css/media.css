@@ -1,28 +1,420 @@
-@media screen and (max-width: 720px){
-  
 .open,
 .close{
+  z-index: 10;
+  top: 0;
+  right: 0;
+  display: none;
+  color: #fff;
+  background: #333333;
+  padding: 10px;
+}
+
+.header-logo-img-aside{
+  display: none;
+}
+
+input[type="checkbox"]{
+  position: absolute;
+  left: -50vw;
+}
+
+.aside-wrapper{
+  display: none;
+  padding-top: 50px;
+}
+
+.aside-li{
+  border-top:  #eaeaea solid 1px;
+  padding: 10px;
   display: block;
+  font-size: 16px;
+  color: #666666;
+  position: relative;
+}
+.aside-ul:last-child{
+  border-bottom:  #eaeaea solid 1px;
+}
+
+
+.aside-li::after{
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid#666666;
+  border-right: 2px solid #666666;
+  position: absolute;
+  transform: rotate(45deg);
+  top: -2px;
+  bottom: 0;
+  right: 10px;
+  margin: auto;
+}
+
+.aside-contact{
+  margin: 0 auto;
+  width: 100%;
+}
+
+.aside-contact-btn{
+  margin: 30px 10px 30px;
+  position: relative;
+  font-size: 16x;
+  height: 72px;
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #F99900;
+}
+
+.aside-contact-btn::after{
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  position: absolute;
+  transform: rotate(45deg);
+  top: -2px;
+  bottom: 0;
+  right: 40px;
+  margin: auto;
+}
+
+
+@media screen and (max-width: 768px){
+main{
+  width: 100%;
+}
+
+.site-header{
+  display: none;
+}
+
+.open,
+.close,
+.aside-wrapper,
+.header-logo-img-aside{
+  display: block;
+}
+
+.media-text{
+  display: inline;
+}
+
+.pc-text{
+  display: none;
 }
 
 .open{
   position: absolute;
 }
 
+.close{
+  position: absolute;
+}
 
-.header-nav{
-    display: none;
+/* --お問い合わせボタン--*/
+.contact-btn{
+  width: 270px;
+  box-sizing: border-box;
+  border: #F99900 solid 4px;
+  background-color: rgba(249, 153, 0, 0.9);
+}
+.contact-btn:active{
+  background-color: #E34A1D;
+}
+
+
+/* ------------------header------------------ */
+.header-logo-img-aside{
+  padding: 10px 0px 0px 5%; 
+  position: absolute;
+  z-index: 100;
 }
 
 aside{
+  width: 100%;
+  position: absolute;
+  top: -1000px;
+  z-index: 60;
   display: flex;
   flex-direction: column;
-  position: absolute;
-  height: 100%;
   transition: all 0.2s;
+  background: #ffffff;
 }
   
-input[]
+input[type="checkbox"]:checked ~ aside{
+  top: 0;
+}
+
+input[type="checkbox"]:checked ~ .back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+/* ------------------mv------------------ */
+h2{
+  font-size: 1.5rem;
+}
+
+.mv-title{
+  padding-top: 100px;
+}
+
+.main-visual{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.ill-logo{
+  top: 65%;
+  left: 15%;
+  width: 150%;
+}
+
+.mv-body .contact-btn{
+  margin-top: 40px;
+}
+
+.scloll{
+  padding: 0px 0px 0px 5%; 
+}
+
+
+/* ------------------about------------------ */
+.question,
+.answer-wrapper{
+  width: 90%;
+  margin: 0 auto;
+  height: auto;
+}
+
+h4{
+  font-size: 2rem;
+}
+.question-wrap1{
+  position: relative;
+}
+.question-img1{
+  position: absolute;
+  top: 100px;
+  left: 220px;
+}
+.question-img2{
+  position: absolute;
+  top: 160px;
+  left: 100px;
+}
+
+.question-wrap2{
+  padding-top: 100px;
+  padding-bottom: 200px;
+  position: relative;
+}
+.question-img3{
+  position: absolute;
+  top: 220px;
+  left: -40px;
+}
+.question-img4{
+  position: absolute;
+  top: 330px;
+  left: 140px;
+}
+
+.question-item4 p{
+  margin-left: 130px;
+}
+
+.question-lead{
+  flex-direction: column;
+}
+.question-title{
+  text-align: left;
+}
+
+
+
+.answer{
+  height: 630px;
+}
+.answer-wrapper{
+  margin-top: 60px;
+}
+
+.answer-img{
+  width: 100%;
+  height: auto;
+}
+
+.answer-text p{
+  text-align: left;
+  list-style: none;
+  letter-spacing: normal;
+}
+
+.question-wrapper{
+  grid-template-columns: 1fr;
+}
+
+
+/* ------------------service------------------ */
+.service{
+  width: 94%;
+  margin: 0 auto;
+}
+
+.service-container{
+  grid-template-columns: 1fr;
+}
+.service-item{
+  height: 444px;
+  pointer-events: none;
+}
+
+.service-head{
+  position: static;
+  color: #666666;
+}
+
+.hover-text{
+  position: static;
+  color: #666666;
+  opacity: 1;
+  transform:  translateY(0%);
+  padding-top: 50px;
+}
+
+.service-img-ill1{
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.service-p{
+  padding-top: 200px;
+}
+
+/* ------------------works------------------ */
+.works{
+  width: 90%;
+  margin: 0 auto;
+}
+.works-container{
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.works-link{
+  pointer-events: none;
+}
+
+/* ----------------specialty----------------- */
+.specialty{
+  width: 94%;
+  margin: 0 auto;
+}
+.specialty-container{
+  grid-template-columns: 1fr;
+}
+
+.specialty-item{
+  pointer-events: none;
+}
+/* -----------------news----------------- */
+.news{
+  width: 90%;
+  margin: 0 auto;
+}
+.news-item{
+  flex-direction: column;
+}
+.news-outline{
+  padding: 0;
+}
+.news-left-item{
+  border-right: none;
+}
+.news-outline{
+  border-top: #f6f6f6 solid 1px;
+}
+
+/* ------------------blog----------------- */
+.blog{
+  width: 90%;
+  margin: 0 auto;
+}
+.blog-container{
+  grid-template-columns: 1fr;
+}
+
+
+
+/* ------------------contact-banner----------------- */
+.contact-wrap{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.contact-info{
+  flex-direction: column;
+}
+.contact-text,
+.contact-time{
+  margin: 0;
+}
+.contact-wrapper{
+  padding-left: 0;
+  padding-right: 0;
+  width: 356px;
+}
+
+
+/* ------------------footer----------------- */
+/* ------------cat1------------ */
+.footer-cat1{
+  width: 90%;
+  margin: 0 auto;
+  grid-template-columns: 1fr;
+}
+.footer-flex2{
+  grid-template-columns: 1fr;
+}
+.footer-flex2 a{
+  display: block;
+}
+
+
+
+/* ------------cat2------------ */
+.footer-cat2-text{
+  text-align: center;
+  flex-direction: column;
+}
+.footer-cat2-add{
+  margin: 0 auto;
+  flex-direction: column;
+}
+.footer-cat2-sendai{
+  margin-right: 0px;
+}
+.footer-cat2-tokyo{
+  margin-right: 0px;
+}
+
+/* ------------cat3------------ */
+.footer-cat3{
+  text-align: center;
+}
+
+
+
+
 
 
 
